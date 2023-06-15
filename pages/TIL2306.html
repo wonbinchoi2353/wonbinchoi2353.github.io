@@ -47,6 +47,8 @@
           <a href="#0613">0613</a>
           <a href="#0614">0614</a>
           <a href="#0615">0615</a>
+          <a href="#0616">0616</a>
+          <a href="#0617">0617</a>
         </div>
         <div class="content">
           <h1><a href="#top" name="0601">0601</a></h1>
@@ -428,6 +430,43 @@ d(); // 2
             </div>
           </div>
           <h1><a href="#top" name="0615">0615</a></h1>
+          <div class="cnts">
+            <h3>error</h3>
+            node.js
+            <li>get api로 carts 조회 시도하자 서버 중지</li>
+            <li>TypeError: Cart.find is not a function</li>
+            <li>cart.js에 cart schemas가 작성되지 않은 상태였다</li>
+            mongodb
+            <li>
+              MongoServerError: E11000 duplicate key error collection:
+              blog.posts index: name_1 dup key: { name: "시원한 콜라" }
+            </li>
+            <li>
+              mongoose schemas에 작성한 unique: true 때문에 같은 이름으로
+              생성하려고 하면 서버가 꺼짐
+            </li>
+            mongodb2
+            <li>
+              MongoServerError: E11000 duplicate key error collection:
+              blog.posts index: goodsId_1 dup key: { goodsId: null }
+            </li>
+            <li>3T collection에서 indexes 삭제</li>
+            javascript
+            <div class="code_box">
+              <pre>
+const date = require("../util/date");
+date = date.date();
+            </pre
+              >
+            </div>
+            <li>TypeError: Assignment to constant variable</li>
+            <li>상수에 다른 값을 할당하려는 시도</li>
+            <h3>javascript</h3>
+            <li>폴더 안에 있는 js파일 실행: node ./폴더.파일.js</li>
+          </div>
+          <h1><a href="#top" name="0616">0616</a></h1>
+          <div class="cnts"></div>
+          <h1><a href="#top" name="0617">0617</a></h1>
           <div class="cnts"></div>
         </div>
       </div>
