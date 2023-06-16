@@ -49,6 +49,7 @@
           <a href="#0615">0615</a>
           <a href="#0616">0616</a>
           <a href="#0617">0617</a>
+          <a href="#0618">0618</a>
         </div>
         <div class="content">
           <h1><a href="#top" name="0601">0601</a></h1>
@@ -465,8 +466,42 @@ date = date.date();
             <li>폴더 안에 있는 js파일 실행: node ./폴더.파일.js</li>
           </div>
           <h1><a href="#top" name="0616">0616</a></h1>
-          <div class="cnts"></div>
+          <div class="cnts">
+            <h3>not an error</h3>
+            <div class="code_box">
+              <pre>
+// 게시글 상세 조회
+router.get("/posts/:_postsId", async (req, res) => { <span class="add">// s 한 글자 차이</span>
+  const { _postId } = req.params;
+  const posts = await Post.find();
+  const data = posts
+    <span class="add">// _id 값은 오브젝트라서 문자열로 변환 필요</span>
+    .filter((post) => post._id.toString() === _postId)
+    .map((post) => {
+      return {
+        postId: post._id,
+        user: post.user,
+        title: post.title,
+        content: post.content,
+        createdAt: post.createdAt,
+      };
+    });
+  res.json({ data: data });
+});
+            </pre>
+            </div>
+            <h3>error</h3>
+            Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are
+            sent to the client
+            <li>같은 요청에 대해 두 번 이상의 응답을 보내려고 할 때 발생</li>
+            Post.update is not a function
+            <li>
+              updateOne을 쓰면 되는데 수정 사항이 많아 보여 임의로 update를 씀
+            </li>
+          </div>
           <h1><a href="#top" name="0617">0617</a></h1>
+          <div class="cnts"></div>
+          <h1><a href="#top" name="0618">0618</a></h1>
           <div class="cnts"></div>
         </div>
       </div>
