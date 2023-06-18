@@ -8,8 +8,6 @@
 //     pages.push({ title: "WIL", url: "https://wonbinchoi2353.github.io/templtaes/WIL.html" });
 //     pages.push({ title: "WIL 2023", url: "https://wonbinchoi2353.github.io/templtaes/WIL2023.html" });
 
-
-
 //     // 검색 기능 처리
 //     $('#searchInput').on('keyup', function (event) {
 //         if (event.keyCode === 13) { // 엔터 키를 눌렀을 때 검색 결과 표시
