@@ -25,7 +25,10 @@
     </header>
     <main>
       <div class="title-link">
-        <a href="#title0">첫 번째 문제</a>
+        <a href="#title1">1. 피자 나눠 먹기</a>
+        <a href="#title2">2. 편지</a>
+        <a href="#title3">3. 최댓값 만들기 (1)</a>
+        <a href="#title4">n번째 문제</a>
       </div>
       <div class="middle-content">
         <div class="level-link">
@@ -35,8 +38,84 @@
           <a href="/pages/ALGORITHM-lv3.html">Lv. 3</a>
         </div>
         <div class="content">
-          <h1><a href="#top" name="title0">첫 번째 문제</a></h1>
-          <div class="cnts"></div>
+          <h1><a href="#top" name="title1">피자 나눠 먹기</a></h1>
+          <div class="cnts">
+            <div class="code-box">
+              <pre>
+#1
+function solution(n) {
+  return result = n%7 === 0 ? n/7 | 0 : ~~(n/7) + 1
+}
+            </pre
+              >
+            </div>
+          </div>
+          <h1><a href="#top" name="title2">편지</a></h1>
+          <div class="cnts">
+            <div class="code-box">
+              <pre>
+#1
+function solution(message) {
+  return message.length * 2
+}
+              </pre>
+            </div>
+          </div>
+          <h1><a href="#top" name="title3">최댓값 만들기 (1)</a></h1>
+          <div class="cnts">
+            <div class="code-box">
+              <pre>
+#1
+function solution(numbers) {
+  for (let i = 0; i < numbers.length - 1; i++) {
+      for (let j = i + 1; j < numbers.length; j++) {
+          if (numbers[j] > numbers[i]) {
+              let temp = numbers[i];
+              numbers[i] = numbers[j];
+              numbers[j] = temp;
+          }
+      }
+  }
+  return numbers[0]*numbers[1];
+}
+            </pre
+              >
+            </div>
+
+            <div class="code-box">
+              <pre>
+#2
+// 버블 정렬과 유사
+function solution (numbers) {
+  numbers.sort((a,b) => b - a)
+  return numbers[0] * numbers[1]
+}
+              </pre>
+            </div>
+            <div class="code-box">
+              <pre>
+#3
+// 버블 정렬
+function solution (numbers) {
+  for (let i = 0; i < numbers.length; i++) {
+    for (let j = 0; j < numbers.length - i - 1; j++) {
+      if (numbers[j] < numbers[j + 1]) {
+        let temp = numbers[j];
+        numbers[j] = numbers[j + 1];
+        numbers[j + 1] = temp;
+      }
+    }
+  }
+  return numbers[0] * numbers[1];
+}
+            </pre
+              >
+            </div>
+          </div>
+          <h1><a href="#top" name="title4">n번째 문제</a></h1>
+          <div class="cnts">
+            <div class="code-box"><pre></pre></div>
+          </div>
         </div>
       </div>
     </main>

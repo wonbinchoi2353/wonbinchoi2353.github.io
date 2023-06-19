@@ -59,7 +59,7 @@ main {
 
 /* 알고리즘 */
 .title-link {
-  display: flex;
+  display: block;
   width: 500px;
   height: auto;
   max-width: 23%;
@@ -70,6 +70,7 @@ main {
 }
 
 .title-link a {
+  display: block;
   text-decoration: none;
   color: #007dca;
   margin: 0 10px;
