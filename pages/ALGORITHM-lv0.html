@@ -28,7 +28,8 @@
         <a href="#title1">1. 피자 나눠 먹기</a>
         <a href="#title2">2. 편지</a>
         <a href="#title3">3. 최댓값 만들기 (1)</a>
-        <a href="#title4">n번째 문제</a>
+        <a href="#title4">4. 배열 원소의 길이</a>
+        <a href="#title5">n번째 문제</a>
       </div>
       <div class="middle-content">
         <div class="level-link">
@@ -112,12 +113,57 @@ function solution (numbers) {
               >
             </div>
           </div>
-          <h1><a href="#top" name="title4">n번째 문제</a></h1>
+          <h1><a href="#top" name="title4">배열 원소의 길이</a></h1>
+          <div class="cnts">
+            <div class="code-box">
+              <pre>
+#1
+function solution(strlist) {
+    for (let i = 0; i < strlist.length; i++) {
+        strlist[i] = strlist[i].length
+    }
+    return strlist
+}
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+#2
+function solution(strlist) {
+  return strlist.map(el => { return el.length })
+}
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+#3
+function solution(strlist) {
+  return strlist.reduce((a, b) => [...a, b.length], [])
+} // 누적값, 현재 요소, 초깃값
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+#4
+function solution(strlist) {
+  var answer = [];
+  strlist.forEach(el=>answer.push(el.length))
+  return answer;
+}
+            </pre
+              >
+            </div>
+          </div>
+          <h1><a href="#top" name="title5">n번째 문제</a></h1>
           <div class="cnts">
             <div class="code-box"><pre></pre></div>
           </div>
         </div>
       </div>
+      <div class="outer-link"></div>
     </main>
     <footer></footer>
   </body>
