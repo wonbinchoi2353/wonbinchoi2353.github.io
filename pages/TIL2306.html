@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>2353Devrecords</title>
     <link rel="stylesheet" href="/style/style.css" />
-    <script src="/src/main.js"></script>
+    <script src="/src/main.js" defer></script>
   </head>
   <body>
     <a name="top"></a>
@@ -51,6 +51,7 @@
           <a href="#0618">0618</a>
           <a href="#0619">0619</a>
           <a href="#0620">0620</a>
+          <a href="#0621">0621</a>
         </div>
         <div class="content">
           <h1><a href="#top" name="0601">0601</a></h1>
@@ -549,9 +550,32 @@ router.get("/posts/:_postsId", async (req, res) => { <span class="add">// s 한 
             <li>GMT(Greenwich Mean Time) 표준 시간</li>
           </div>
           <h1><a href="#top" name="0620">0620</a></h1>
+          <div class="cnts">
+            <h3>error</h3>
+            <li>
+              CastError: Cast to Number failed for value "cart" (type string) at
+              path "goodsId" for model "Goods"
+            </li>
+            <li>
+              router.get("<span class="add">api</span>/goods/cart") ->
+              router.get("/goods/cart")
+            </li>
+            <h3>mongoDB</h3>
+            Field Update Operators
+            <li>$set</li>
+            Logical Query Operators
+            <li>$and, $not, $nor, $or</li>
+            <h3>javascript</h3>
+            <li>
+              ?? 널 병합 문자열, 왼쪽의 값이 비었거나 null일 경우 오른쪽 값으로
+              대치
+            </li>
+          </div>
+          <h1><a href="#top" name="0621">0621</a></h1>
           <div class="cnts"></div>
         </div>
       </div>
+      <div class="outer-link"></div>
     </main>
     <footer></footer>
   </body>
