@@ -53,6 +53,7 @@
           <a href="#0620">0620</a>
           <a href="#0621">0621</a>
           <a href="#0622">0622</a>
+          <a href="#0623">0623</a>
         </div>
         <div class="content">
           <h1><a href="#top" name="0601">0601</a></h1>
@@ -587,6 +588,31 @@ router.get("/posts/:_postsId", async (req, res) => { <span class="add">// s 한 
             </li>
           </div>
           <h1><a href="#top" name="0622">0622</a></h1>
+          <div class="cnts">
+            <h3>error</h3>
+            express
+            <li>
+              TypeError: Cannot destructure property 'nickname' of
+              'res.locals.user' as it is null.
+            </li>
+            <li>게시글 작성 실패</li>
+            <li>
+              res.locals.user에 값이 할당되는 미들웨어 파일에서 jwt.verify
+              반환값이 없음
+            </li>
+            <li>토큰은 잘 들어와서 문제를 찾기 어려움</li>
+            <li>jwt.sign에서 user.userId를 user.nickname으로 변경</li>
+            <li>
+              CastError: Cast to ObjectId failed for value "이름 입니다." (type
+              string) at path "_id" for model "User"
+            </li>
+            <li>user 속성 확인</li>
+            <li>프로퍼티가 _id</li>
+            <li>user.nickname을 user._id로 변경</li>
+            <li>게시글 작성 성공</li>
+            <li>몇 시간 전만 해도 잘 됐었어서 에러가 생긴 이유 불분명</li>
+          </div>
+          <h1><a href="#top" name="0623">0623</a></h1>
           <div class="cnts"></div>
         </div>
       </div>
