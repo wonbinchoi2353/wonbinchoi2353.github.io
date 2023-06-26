@@ -56,6 +56,8 @@
           <a href="#0623">0623</a>
           <a href="#0624">0624</a>
           <a href="#0625">0625</a>
+          <a href="#0626">0626</a>
+          <a href="#0627">0627</a>
         </div>
         <div class="content">
           <h1><a href="#top" name="0601">0601</a></h1>
@@ -645,11 +647,11 @@
             <li>객체 프로퍼티나 배열 요소에 접근하기 위해 사용하는 . []</li>
             <div class="code-box">
               <pre>
-              // 재귀함수, factorial, 계승, 차례곱
-              function fact(x) {
-                if (x > 1) return x * fact(x - 1);
-                else return 1;
-              }
+  // factorial, 재귀함수, 계승, 차례곱
+  function fact(x) {
+    if (x > 1) return x * fact(x - 1);
+    else return 1;
+  }
             </pre
               >
             </div>
@@ -676,6 +678,64 @@
             </div>
           </div>
           <h1><a href="#top" name="0626">0626</a></h1>
+          <div class="cnts">
+            <h3>javascript</h3>
+            <div class="code-box">
+              <pre>
+  // 절댓값
+  function abs(x) {
+    if (x >= 0 ) {
+      return x;
+    }
+    else {
+      return -x;
+    }
+  }
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  // 배열 요소의 합
+  function sum(array) {
+    let sum = 0;
+    for (let x of array) {
+      sum += x;
+    }
+    return sum;
+  }
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  // 팩토리얼 2
+  function factorial2(n) {
+    let product = 1;
+    while (n > 1) {
+      product *= n;
+      n--;
+    }
+    return product;
+  }
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  // 팩토리얼 3
+  function factorial3(n) {
+    let i, product = 1;
+    for (i=2; i >= n; i++)
+      product *= i;
+
+    return product;
+  }
+            </pre
+              >
+            </div>
+          </div>
+          <h1><a href="#top" name="0627">0627</a></h1>
           <div class="cnts"></div>
         </div>
       </div>
