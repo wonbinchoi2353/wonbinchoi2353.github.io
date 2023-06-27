@@ -58,6 +58,7 @@
           <a href="#0625">0625</a>
           <a href="#0626">0626</a>
           <a href="#0627">0627</a>
+          <a href="#0628">0628</a>
         </div>
         <div class="content">
           <h1><a href="#top" name="0601">0601</a></h1>
@@ -736,6 +737,32 @@
             </div>
           </div>
           <h1><a href="#top" name="0627">0627</a></h1>
+          <div class="cnts">
+            <h3><span class="unknown">javascript</span></h3>
+            <div class="code-box">
+              <pre>
+  class Point {         // 클래스
+    constructor(x,y) {  // 새 인스턴스 초기화 하는 생성자 함수
+      this.x;           // this는 객체
+      this.y;           // 함수에 전달된 인자를 객체의 프로퍼티로 저장
+    }
+    distance() {            // 원점과 지점 사이의 거리 계산하는 메서드
+      return Math.sqrt(     // x^2 + y^2 의 제곱근 반환
+        this.x * this.x +   
+        this.y * this.y     // this는 distance 메서드를 호출하는 Point 객체
+      );
+    }
+  }
+  // 생성자 함수와 new 키워드로 Point 객체 만들기
+  let p = new Point(1, 1);
+
+  // Point 객체 p에서 메서드 사용
+  p.distance() // Math.SQRT(2)
+            </pre
+              >
+            </div>
+          </div>
+          <h1><a href="#top" name="0628">0628</a></h1>
           <div class="cnts"></div>
         </div>
       </div>
