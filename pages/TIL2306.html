@@ -797,7 +797,16 @@
             <li>fetch 반응 없을 때 -> html에서 js파일 연결 확인</li>
           </div>
           <h1><a href="#top" name="0630">0630</a></h1>
-          <div class="cnts"></div>
+          <div class="cnts">
+            <h3>node.js</h3>
+            TypeError: Cannot set properties of null (setting 'innerHTML') POST
+            http://localhost:3018/api/posts 500 (Internal Server Error)
+            <li>
+              let storage = multer.diskStorage({ destination: (req, file, cb) =>
+              { cb(null, './img-server');
+            </li>
+            <li>문제가 감이 너무 안 잡힐 땐 코드 안에서 찾기</li>
+          </div>
         </div>
       </div>
       <div class="outer-link"></div>
