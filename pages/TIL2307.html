@@ -36,6 +36,7 @@
           <a href="#0702">0702</a>
           <a href="#0703">0703</a>
           <a href="#0704">0704</a>
+          <a href="#0705">0705</a>
         </div>
         <div class="content">
           <h1><a href="#top" name="0701">0701</a></h1>
@@ -94,8 +95,86 @@
             <li>
               객체 지향 프로그램의 정보 은닉과 캡슐과 같은 효과를 얻을 수 있음
             </li>
+            Promise
+            <li>콜백 지옥에서 벗어나기</li>
+            <li>비동기 처리의 결과를 약속하는 객체</li>
+            <li>상태값: pending, fulfilled(성공), rejected(실패)</li>
+            <li>성공 => resolve(), 실패 => reject()</li>
+            <li>.then, .catch 체이닝</li>
+            async, await
+            <li>함수가 끝날 때까지 기다린다</li>
+            class
+            <li>생성자 constructor</li>
+            <li>메서드 method()</li>
+            <li>
+              class 자식 extends 부모: 자식 클래스는 부모 클래스의 메서드 사용
+              가능, 반대는 불가능
+            </li>
+            array
+            <li>
+              중간에 넣거나 빼기 속도 아주 느림, 메모리 공간 주소 할당, 빈 칸
+              생기면 채우는 과정 복잡
+            </li>
+            <li>만들기(split): 문자열을 배열로</li>
+            <li>합치기(join): 배열을 문자열로</li>
+            <li>추가(push)</li>
+            <li>배열 합치기(concat): const array3 = array1.concat(array2);</li>
+            <li>삭제(pop, splice: 원본 배열 바꿈, slice: 새로운 함수 반환)</li>
+            <li>반복문(forEach, map: 새로운 배열 반환, 객체 반환 가능)</li>
+            <li>
+              찾기(find: 객체 검색 가능, indexOf: 없으면 -1, findIndex: 없으면
+              -1, includes)
+            </li>
+            <li>
+              정렬(sort: 원본 배열을 바꿈, 콜백함수 없으면 유니코드 기준으로
+              정렬)
+            </li>
+            <li>뒤집기(reverse)</li>
+            Map
+            <li>객체와 비슷, 객체는 key에 string만 씀</li>
+            <li>쓰는 이유? 명시적이다. get, set, has, clear</li>
+            <li>객체와 맵은 서로 호환이 된다.</li>
+            <li>let map1 = new Map(); map1.set('a', 3); map1.get('a');</li>
+            <li>key찾기: map1.has('a')</li>
+            <li>내용 지우기: map1.clear();</li>
+            Set
+            <li>중복을 허용 하지 않음, 키가 없음</li>
+            <li>const set1 = new Set(); set1.add(1); set1.has(1);</li>
           </div>
           <h1><a href="#top" name="0704">0704</a></h1>
+          <div class="cnts">
+            <h3>http</h3>
+            TCP
+            <li>
+              서버와 클라이언트간 신뢰성 있는 데이터 송수신을 위해 만들어진
+              프로토콜
+            </li>
+            UDP
+            <li>TCP와 다르게 비연결성 프로토콜</li>
+            소켓
+            <li>네트워크에서 데이터를 송수신하기 위해 반드시 거치는 연결부</li>
+            <li>
+              TCP 소켓: 안정적인 데이터 송수신, UDP 소켓: 빠른 전송속도, 일부
+              패킷 손실 가능
+            </li>
+            패킷
+            <li>소켓을 통해 송수신하는 데이터 덩어리 한 개</li>
+            웹소켓
+            <li>실시간 웹 서비스를 제공하기 위해 만들어진 Socket</li>
+            <li>Google Docs 등 협업툴의 실시간 공동 편집 기능, 웹 메신저</li>
+            socket.io
+            <li>
+              자바스크립트를 사용해 웹소켓 사용할 때 가장 많이 사용되는
+              라이브러리
+            </li>
+            <li>
+              웹소켓을 포함해 웹소켓을 사용하지 못 하는 브라우저에서 사용
+              가능하게 구현
+            </li>
+            <h3>html</h3>
+            <li>html 파일 브라우저에 드래그, 드랍</li>
+          </div>
+          <h1><a href="#top" name="0705">0705</a></h1>
           <div class="cnts"></div>
         </div>
       </div>
