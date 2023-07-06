@@ -38,6 +38,7 @@
           <a href="#0704">0704</a>
           <a href="#0705">0705</a>
           <a href="#0706">0706</a>
+          <a href="#0707">0707</a>
         </div>
         <div class="content">
           <h1><a href="#top" name="0701">0701</a></h1>
@@ -225,7 +226,7 @@
             </li>
             <li>Atomicity 원자성: 여러 작업 묶음</li>
             <li>
-              Aonsistency 일관성: 성공시 문제 발생하지 않고 실패시 데이터 유지
+              Consistency 일관성: 성공시 문제 발생하지 않고 실패시 데이터 유지
             </li>
             <li>
               Isolation 격리성: 중간 상태의 트랜잭션 보거나 변경할 수 없게 구성
@@ -233,6 +234,10 @@
             </li>
             <li>Durability 지속성: 완성된 결과만 저장</li>
             <h3>lock</h3>
+            <li>
+              동시성 제어, 데이터 베이스 점유해서 다른 트랜잭션의 접근 막아
+              동시성과 일관석의 균형 맞추기
+            </li>
             <li>shared locks 공유 락, 읽기 허용/수정 금지, read 전용 락</li>
             <li>exclusive locks 배타락, 읽기,수정 금지, write 전용 락</li>
             <h3>locking level</h3>
@@ -348,7 +353,7 @@
             객체 지향 설계
             <li>
               요구 기능 온전히 수행, 이해하기 쉬운 코드, 변경하기 쉬운 설계(한
-              번엔 하나의 클래스만 변경)
+              번에 하나의 클래스만 변경)
             </li>
             <li>캡슐화 -> 의존성 적절히 관리 -> 객체 사이의 결합도 낮춤</li>
             <h3>객체 지향 설계 5원칙 SOLID</h3>
@@ -373,6 +378,86 @@
             </li>
           </div>
           <h1><a href="#top" name="0706">0706</a></h1>
+          <div class="cnts">
+            <h3>Layered Architecture Pattern</h3>
+            <li>domain: 개발자가 만든 프로세스가 지원하는 활동</li>
+            <li>domain model: 특정 도메인 개념적으로 정리</li>
+            <li>domain modeling: entity, value object, domain service</li>
+            Layered Architecture 플로우
+            <li>클라이언트가 요청 보냄</li>
+            <li>요청을 url에 맞는 컨트롤러가 수신</li>
+            <li>컨트롤러는 요청을 처리하기 위해 서비스 호출</li>
+            <li>서비스는 필요한 데이터를 가져오기 위해 저장소에 데이터 요청</li>
+            <li>서비스는 저장소에서 가져온 데이터 가공, 컨트롤러에게 넘김</li>
+            <li>컨트롤러는 서비스의 결과물 클라이언트에 전달</li>
+            <h3>review</h3>
+            스레드
+            <li>
+              싱글 스레드: 한 번에 하나의 작업만 처리, 대부분의 웹 브라우저 환경
+            </li>
+            <li>
+              멀티 스레드: 다수의 작업을 동시에 처리, 대규모 데이터 처리, 동시
+              접속 처리하는 서버
+            </li>
+            동기/비동기, 블로킹/논블로킹
+            <li>
+              동기: 작업이 끝날 때까지 다음 작업이 실행되지 않고 순차적으로
+              진행됨
+            </li>
+            <li>
+              비동기: 작업이 실행되는 동안 다른 작업을 동시에 수행, 콜백함수,
+              프로미스, async/await
+            </li>
+            <li>블로킹: 한 작업이 끈날 때까지 다음 작업을 중지</li>
+            <li>논블로킹: 작업이 실행되는 동안 다른 작업을 계속 실행</li>
+            jsvascript 내장 모듈
+            <li>os: 운영체제와 관련된 정보 제공</li>
+            <li>
+              cluster: 멀티 스레딩 지원, 서버 애플리케이션 여러 개의 프로세스로
+              나누어 처리, 각 프로세스는 독립적 요청 처리
+            </li>
+            <li>path: 파일 경로, 이름, 확장자 추출</li>
+            <li>fs: 파일 생성, 삭제, 읽기, 쓰기</li>
+            <li>http: 서버/클라이언트 생성/관리</li>
+            인증/인가
+            <li>인증: Authentication 신원 확인</li>
+            <li>인가: Authorization 접근 권한 부여</li>
+            쿠키/세션/jwt
+            <li>
+              쿠키: 브라우저에 저장되는 사용자 식별 정보, 간단한 사용자
+              정보/상태 유지하고 식별할 때
+            </li>
+            <li>
+              세션: 서버에 저장되는 사용자 정보를 세션 id로 관리, 중요한 사용자
+              정보를 안전하게 관리하고 인증 상태를 유지해햐 할 때
+            </li>
+            <li>
+              jwt: 클라이언트와 서버 간에 인증을 위한 정보를 안전하게 전송하기
+              위한 토큰 기반 인증 방식, 세션 관리 대체
+            </li>
+            미들웨어
+            <li>
+              역할: 클라이언트로부터 들어온 요청을 파싱, 인증, 데이터 검증,
+              응답처리
+            </li>
+            <li>
+              사용 방법: 애플리케이션 미들웨어 app.use(), 라우터 미들웨어
+              router.use(), 애러 처리 미들웨어에 에러 핸들러 함수 등록
+            </li>
+            orm
+            <li>
+              orm: object relational mapping, 객체 지향 프로그래밍 언어와 관계형
+              데이터베이스 간의 매핑
+            </li>
+            sequelize
+            <li>npx sequelize init, db:create</li>
+            <li>
+              model:generate --name User --attributes
+              username:string,password:string
+            </li>
+            <li>db:migrate</li>
+          </div>
+          <h1><a href="#top" name="0707">0707</a></h1>
           <div class="cnts"></div>
         </div>
       </div>
