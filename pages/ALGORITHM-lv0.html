@@ -32,7 +32,9 @@
         <a href="#title5">5. 배열 뒤집기</a>
         <a href="#title6">6. 중복된 숫자 갯수</a>
         <a href="#title7">7. 머쓱이보다 키 큰 사람</a>
-        <a href="#title8">n번째 문제</a>
+        <a href="#title8">8. 피자 나눠먹기 (3)</a>
+        <a href="#title9">n번째 문제</a>
+        <a href="#title10">n번째 문제</a>
       </div>
       <div class="middle-content">
         <div class="level-link">
@@ -46,11 +48,11 @@
           <div class="cnts">
             <div class="code-box">
               <pre>
-#1
-// n이 7의 배수라면 n/7을, 아니라면 n을 7로 나눈 정수값에 1을 더해 반환 (반올림)
-function solution(n) {
-  return result = n%7 === 0 ? n/7 | 0 : ~~(n/7) + 1
-}
+  #1
+  // n이 7의 배수라면 n/7을, 아니라면 n을 7로 나눈 정수값에 1을 더해 반환 (반올림)
+  function solution(n) {
+    return result = n%7 === 0 ? n/7 | 0 : ~~(n/7) + 1
+  }
             </pre
               >
             </div>
@@ -59,10 +61,10 @@ function solution(n) {
           <div class="cnts">
             <div class="code-box">
               <pre>
-#1
-function solution(message) {
-  return message.length * 2
-}
+  #1
+  function solution(message) {
+    return message.length * 2
+  }
               </pre>
             </div>
           </div>
@@ -70,50 +72,50 @@ function solution(message) {
           <div class="cnts">
             <div class="code-box">
               <pre>
-#1
-// 내림차순으로 정렬해서 앞의 두 수 곱하기
-function solution(numbers) {
-  for (let i = 0; i < numbers.length - 1; i++) {
-      for (let j = i + 1; j < numbers.length; j++) {
-          if (numbers[j] > numbers[i]) {
-              let temp = numbers[i];
-              numbers[i] = numbers[j];
-              numbers[j] = temp;
-          }
-      }
+  #1
+  // 내림차순으로 정렬해서 앞의 두 수 곱하기
+  function solution(numbers) {
+    for (let i = 0; i < numbers.length - 1; i++) {
+        for (let j = i + 1; j < numbers.length; j++) {
+            if (numbers[j] > numbers[i]) {
+                let temp = numbers[i];
+                numbers[i] = numbers[j];
+                numbers[j] = temp;
+            }
+        }
+    }
+    return numbers[0]*numbers[1];
   }
-  return numbers[0]*numbers[1];
-}
             </pre
               >
             </div>
 
             <div class="code-box">
               <pre>
-#2
-// 버블 정렬과 유사
-function solution (numbers) {
-  numbers.sort((a,b) => b - a)
-  return numbers[0] * numbers[1]
-}
+  #2
+  // 버블 정렬과 유사
+  function solution (numbers) {
+    numbers.sort((a,b) => b - a)
+    return numbers[0] * numbers[1]
+  }
               </pre>
             </div>
             <div class="code-box">
               <pre>
-#3
-// 버블 정렬
-function solution (numbers) {
-  for (let i = 0; i < numbers.length; i++) {
-    for (let j = 0; j < numbers.length - i - 1; j++) {
-      if (numbers[j] < numbers[j + 1]) {
-        let temp = numbers[j];
-        numbers[j] = numbers[j + 1];
-        numbers[j + 1] = temp;
+  #3
+  // 버블 정렬
+  function solution (numbers) {
+    for (let i = 0; i < numbers.length; i++) {
+      for (let j = 0; j < numbers.length - i - 1; j++) {
+        if (numbers[j] < numbers[j + 1]) {
+          let temp = numbers[j];
+          numbers[j] = numbers[j + 1];
+          numbers[j + 1] = temp;
+        }
       }
     }
+    return numbers[0] * numbers[1];
   }
-  return numbers[0] * numbers[1];
-}
             </pre
               >
             </div>
@@ -122,42 +124,42 @@ function solution (numbers) {
           <div class="cnts">
             <div class="code-box">
               <pre>
-#1
-function solution(strList) {
-    for (let i = 0; i < strList.length; i++) {
-        strList[i] = strList[i].length
-    }
-    return strList
-}
+  #1
+  function solution(strList) {
+      for (let i = 0; i < strList.length; i++) {
+          strList[i] = strList[i].length
+      }
+      return strList
+  }
             </pre
               >
             </div>
             <div class="code-box">
               <pre>
-#2
-function solution(strList) {
-  return strList.map(item => { return item.length })
-}
+  #2
+  function solution(strList) {
+    return strList.map(item => { return item.length })
+  }
             </pre
               >
             </div>
             <div class="code-box">
               <pre>
-#3
-function solution(strList) {
-  return strList.reduce((a, b) => [...a, b.length], [])
-} // reduce((누적값, 현재 요소) => [], 초깃값)
+  #3
+  function solution(strList) {
+    return strList.reduce((a, b) => [...a, b.length], [])
+  } // reduce((누적값, 현재 요소) => [], 초깃값)
             </pre
               >
             </div>
             <div class="code-box">
               <pre>
-#4
-function solution(strList) {
-  var answer = [];
-  strList.forEach(el=>answer.push(el.length))
-  return answer;
-}
+  #4
+  function solution(strList) {
+    var answer = [];
+    strList.forEach(el=>answer.push(el.length))
+    return answer;
+  }
             </pre
               >
             </div>
@@ -166,15 +168,15 @@ function solution(strList) {
           <div class="cnts">
             <div class="code-box">
               <pre>
-#1
-// 배열의 마지막부터 거꾸로 순회해서 새로운 배열에 할당
-function solution(num_list) {
-    let reverse_num_list = [];
-    for (let i = num_list.length -1; i >= 0; i--) {
-        reverse_num_list.push(num_list[i])
-    }
-    return reverse_num_list
-}
+  #1
+  // 배열의 마지막부터 거꾸로 순회해서 새로운 배열에 할당
+  function solution(num_list) {
+      let reverse_num_list = [];
+      for (let i = num_list.length -1; i >= 0; i--) {
+          reverse_num_list.push(num_list[i])
+      }
+      return reverse_num_list
+  }
             </pre
               >
             </div>
@@ -183,53 +185,53 @@ function solution(num_list) {
           <div class="cnts">
             <div class="code-box">
               <pre>
-#1
-// 배열의 요소가 n과 같으면 count에 1을 더하기
-function solution(array, n) {
-    let count = 0;
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] === n) count++
-    }
-    return count;
-}
-            </pre
-              >
-            </div>
-            <div class="code-box">
-              <pre>
-#2
-function solution(array, n) {
-  return array.filter(item => item === n).length
-}
-            </pre
-              >
-            </div>
-            <div class="code-box">
-              <pre>
-#3
-function solution(array, n) {
-  var answer = 0;
-  array.map(item => {
-      if (item === n) return answer++
-  })
-  return answer;
-}
-            </pre
-              >
-            </div>
-            <div class="code-box">
-              <pre>
-#4
-// 배열에서 n을 찾고 그 다음 index부터 다시 찾기
-function solution(array, n) {
-  let answer = 0;
-  let pos = 0;
-  while (array.indexOf(n, pos) != -1) {
-      answer++
-      pos = array.indexOf(n, pos) + 1
+  #1
+  // 배열의 요소가 n과 같으면 count에 1을 더하기
+  function solution(array, n) {
+      let count = 0;
+      for (let i = 0; i < array.length; i++) {
+          if (array[i] === n) count++
+      }
+      return count;
   }
-  return answer;
-} // indexOf(찾는 값, 위치)
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #2
+  function solution(array, n) {
+    return array.filter(item => item === n).length
+  }
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #3
+  function solution(array, n) {
+    var answer = 0;
+    array.map(item => {
+        if (item === n) return answer++
+    })
+    return answer;
+  }
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #4
+  // 배열에서 n을 찾고 그 다음 index부터 다시 찾기
+  function solution(array, n) {
+    let answer = 0;
+    let pos = 0;
+    while (array.indexOf(n, pos) != -1) {
+        answer++
+        pos = array.indexOf(n, pos) + 1
+    }
+    return answer;
+  } // indexOf(찾는 값, 위치)
             </pre
               >
             </div>
@@ -238,50 +240,105 @@ function solution(array, n) {
           <div class="cnts">
             <div class="code-box">
               <pre>
-#1
-function solution(array, height) {
-  return array.filter(item => item > height).length;
-}
-            </pre
-              >
-            </div>
-            <div class="code-box">
-              <pre>
-#2
-function solution(array, height) {
-  let count = 0;
-  array.map(item => item > height && count++);
-  return count;
-} // 앞의 조건이 참이면 && 뒤의 로직 실행
-            </pre
-              >
-            </div>
-            <div class="code-box">
-              <pre>
-#3
-function solution(array, height) {
-  let count = 0;
-  array.forEach(item => { if (item > height) count++ });
-  return count;
-}
-            </pre
-              >
-            </div>
-            <div class="code-box">
-              <pre>
-#4
-function solution(array, height) {
-  let count = 0;
-  for (let i = 0; i < array.length; i++) {
-      if (array[i] > height) count++
+  #1
+  function solution(array, height) {
+    return array.filter(item => item > height).length;
   }
-  return count;
-}
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #2
+  function solution(array, height) {
+    let count = 0;
+    array.map(item => item > height && count++);
+    return count;
+  } // 앞의 조건이 참이면 && 뒤의 로직 실행
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #3
+  function solution(array, height) {
+    let count = 0;
+    array.forEach(item => { if (item > height) count++ });
+    return count;
+  }
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #4
+  function solution(array, height) {
+    let count = 0;
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] > height) count++
+    }
+    return count;
+  }
             </pre
               >
             </div>
           </div>
-          <h1><a href="#top" name="title8">n번째 문제</a></h1>
+          <h1><a href="#top" name="title8">피자 나눠먹기 (3)</a></h1>
+          <div class="cnts">
+            <div class="code-box">
+              <pre>
+  #1
+  // 반올림
+  function solution(slice, n) {
+      return n%slice === 0 ? n/slice : ~~(n/slice) + 1;
+  }
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #2
+  function solution(slice, n) {
+    return Math.ceil(n/slice);
+  }
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #3
+  function solution(slice, n) {
+    let i = 1;
+    while (slice*i < n) i++;
+    return i
+  }
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #4
+  function solution(slice, n) {
+    return n%slice ? parseInt(n/slice) + 1 : n/slice
+  }
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #5
+  <span class="unknown">// 이해 안 됨</span>
+  function solution(slice, n) {
+    return (n+slice-1)/slice&lt;&lt;0;
+  } // 비트 왼쪽 시프트 연산자로 소숫점 제거
+            </pre>
+            </div>
+          </div>
+          <h1><a href="#top" name="title9">n번째 문제</a></h1>
+          <div class="cnts">
+            <div class="code-box"><pre></pre></div>
+          </div>
+          <h1><a href="#top" name="title10">n번째 문제</a></h1>
           <div class="cnts">
             <div class="code-box"><pre></pre></div>
           </div>
