@@ -33,7 +33,7 @@
         <a href="#title6">6. 중복된 숫자 갯수</a>
         <a href="#title7">7. 머쓱이보다 키 큰 사람</a>
         <a href="#title8">8. 피자 나눠먹기 (3)</a>
-        <a href="#title9">n번째 문제</a>
+        <a href="#title9">9. 아이스 아메리카노</a>
         <a href="#title10">n번째 문제</a>
       </div>
       <div class="middle-content">
@@ -49,7 +49,7 @@
             <div class="code-box">
               <pre>
   #1
-  // n이 7의 배수라면 n/7을, 아니라면 n을 7로 나눈 정수값에 1을 더해 반환 (반올림)
+  // n이 7의 배수라면 n/7을, 아니라면 n을 7로 나눈 정수값에 1을 더해 반환 (올림)
   function solution(n) {
     return result = n%7 === 0 ? n/7 | 0 : ~~(n/7) + 1
   }
@@ -288,7 +288,7 @@
             <div class="code-box">
               <pre>
   #1
-  // 반올림
+  // 올림
   function solution(slice, n) {
       return n%slice === 0 ? n/slice : ~~(n/slice) + 1;
   }
@@ -334,9 +334,92 @@
             </pre>
             </div>
           </div>
-          <h1><a href="#top" name="title9">n번째 문제</a></h1>
+          <h1><a href="#top" name="title9">아이스 아메리카노</a></h1>
           <div class="cnts">
-            <div class="code-box"><pre></pre></div>
+            <div class="code-box">
+              <pre>
+  #1
+  // 내림
+  function solution(money) {
+    return [money/5500&lt;&lt;0, money%5500]
+  }
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #2
+  function solution(money) {
+    return [money/5500 | 0, money%5500]
+  }
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #3
+  function solution(money) {
+    return [parseInt(money/5500), money%5500]
+  }
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #4
+  function solution(money) {
+    return [Math.floor(money/5500), money%5500]
+  }
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #5
+  function solution(money) {
+    let count = 0;
+    while (count <= money/5500 -1) {
+        count++;
+    }
+    return [count, money%5500]
+  }
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #6
+  function solution(money) {
+    let count = 0;
+    while (money >= 5500) {
+        money -= 5500;
+        count++;
+    }
+    return [count, money]
+  }
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #7
+  function solution(money) {
+    return [~~(money/5500), money%5500]
+  }
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #8
+  function solution(money) {
+    const answer = Array(2)
+    answer[0] = Math.floor(money / 5500)
+    answer[1] = money - answer[0] * 5500
+    return answer
+  }
+            </pre
+              >
           </div>
           <h1><a href="#top" name="title10">n번째 문제</a></h1>
           <div class="cnts">
