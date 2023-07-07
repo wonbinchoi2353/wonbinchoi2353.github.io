@@ -39,6 +39,8 @@
           <a href="#0705">0705</a>
           <a href="#0706">0706</a>
           <a href="#0707">0707</a>
+          <a href="#0708">0708</a>
+          <a href="#0709">0709</a>
         </div>
         <div class="content">
           <h1><a href="#top" name="0701">0701</a></h1>
@@ -408,7 +410,7 @@
               비동기: 작업이 실행되는 동안 다른 작업을 동시에 수행, 콜백함수,
               프로미스, async/await
             </li>
-            <li>블로킹: 한 작업이 끈날 때까지 다음 작업을 중지</li>
+            <li>블로킹: 한 작업이 끝날 때까지 다음 작업을 중지</li>
             <li>논블로킹: 작업이 실행되는 동안 다른 작업을 계속 실행</li>
             jsvascript 내장 모듈
             <li>os: 운영체제와 관련된 정보 제공</li>
@@ -442,11 +444,11 @@
             </li>
             <li>
               사용 방법: 애플리케이션 미들웨어 app.use(), 라우터 미들웨어
-              router.use(), 애러 처리 미들웨어에 에러 핸들러 함수 등록
+              router.use(), 에러 처리 미들웨어에 에러 핸들러 함수 등록
             </li>
             orm
             <li>
-              orm: object relational mapping, 객체 지향 프로그래밍 언어와 관계형
+              object relational mapping, 객체 지향 프로그래밍 언어와 관계형
               데이터베이스 간의 매핑
             </li>
             sequelize
@@ -458,6 +460,55 @@
             <li>db:migrate</li>
           </div>
           <h1><a href="#top" name="0707">0707</a></h1>
+          <div class="cnts">
+            <h3>sequelize</h3>
+            Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are
+            sent to the client
+            <li>return을 안 하고 응답을 두 번 함</li>
+            Error: Argument passed to findByPk is invalid: [object Object]
+            <li>
+              전달된 인수가 올바르지 않음 { userId }가 아니라 userId를 전달해야
+              함
+            </li>
+            original: Error: Unknown column 'userId' in 'field list'
+            <li>userId 컬럼을 찾을 수 없음. model에 userid로 쓰여있었음</li>
+            Validation error, PRIMARY must be unique
+            <li>
+              await queryInterface.renameColumn("users", "userid", "userId");
+            </li>
+            <li>
+              column 이름을 userid 에서 userId로 바꿨는데 attributes에서
+              autoincrement가 해제됨
+            </li>
+            ERROR: Multiple primary key defined
+            <li>프라이머리 키 둘 이상</li>
+            ERROR: Cannot read properties of undefined (reading 'toString')
+            <li>changecolumn에서 autoincrement만 migrate 하려고 함</li>
+            <li>type: Sequelize.INTEGER, 칼럼 타입 명시해줘야 함</li>
+            autoIncrement
+            <li>새로운 컬럼 생성할 때마다 만들어 줘야함</li>
+            <h3>http status</h3>
+            200
+            <li>OK, 로그인 성공, 사용자/게시글/상세 조회, 게시글 수정/삭제</li>
+            201
+            <li>Created, 회원가입 완료, 게시글 생성</li>
+            400
+            <li>Bad Request, 잘못된 요청</li>
+            401
+            <li>
+              Unauthorized, 미승인/비인증, 존재하지 않는 이메일/토큰 사용자,
+              비밀번호/토큰 타입 일치하지 않아, 비정상적인 요청, 권한이 없어
+            </li>
+            404
+            <li>Not Found 게시글이 존재하지 않아</li>
+            409
+            <li>
+              Conflict, 요청이 현재 서버 상태와 충돌, 이미 존재하는 이메일
+            </li>
+          </div>
+          <h1><a href="#top" name="0708">0708</a></h1>
+          <div class="cnts"></div>
+          <h1><a href="#top" name="0709">0709</a></h1>
           <div class="cnts"></div>
         </div>
       </div>
