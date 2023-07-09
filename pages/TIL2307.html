@@ -41,6 +41,7 @@
           <a href="#0707">0707</a>
           <a href="#0708">0708</a>
           <a href="#0709">0709</a>
+          <a href="#0710">0710</a>
         </div>
         <div class="content">
           <h1><a href="#top" name="0701">0701</a></h1>
@@ -507,8 +508,65 @@
             </li>
           </div>
           <h1><a href="#top" name="0708">0708</a></h1>
-          <div class="cnts"></div>
+          <div class="cnts">
+            <h3>error</h3>
+            sequelize validation error
+            <li>changeColumn 하면서 autoIncrement 추가하려는데 오류남</li>
+            <li>다른 속성 하나씩 넣고 빼보면서 다양한 새로운 오류만 발견</li>
+            <li>구글에선 같은 상황 찾지 못 함</li>
+            <li>
+              chat gpt가 답해준 "이미 존재하는 데이터"의 의미를 뒤늦게 생각
+            </li>
+            <li>데이터 베이스에 userId 값이 0인 데이터가 있어서 생긴 오류</li>
+            <li>해당 컬럼 지우기</li>
+            <li>
+              <span class="unknown"
+                >문제의 시작점: renameColumn 하면서 autoIncrement 사라짐</span
+              >
+            </li>
+            <li>
+              <span class="add"
+                >renameColumn 할 때 changeColumn 같이 하면서 autoIncrement
+                추가하기</span
+              >
+            </li>
+          </div>
           <h1><a href="#top" name="0709">0709</a></h1>
+          <div class="cnts">
+            <h3>javascript</h3>
+            <li>메서드는 보통 대상.메서드(요소) 로 쓴다</li>
+            charAt과 at의 차이
+            <li>at: 최신/비표준/음수 지원</li>
+            <li>charAt: 표준/안정적</li>
+            for ... of와 forEach의 차이
+            <li>for ... of: 반복 가능 객체, break, 반환 가능</li>
+            <li>forEach: 배열, 인덱스 접근</li>
+            <h3>sequelize</h3>
+            <li>
+              <span class="unknown"
+                >migration 할 때 데이터 베이스에 데이터가 있어서 migration이 안
+                될 때가 자주 있는데 이러 땐 어떻게 할까?</span
+              >
+            </li>
+            <h3>error</h3>
+            "message": "notNull Violation: Post.title cannot be null,\nnotNull
+            Violation: Post.content cannot be null"
+            <li>POST http://localhost:3000/posts/14/comments</li>
+            <li>댓글 생성 api인데 Post.create로 작성</li>
+            "message": "notNull Violation: Comment.commentId cannot be
+            null,\nnotNull Violation: Comment.postId cannot be null,\nnotNull
+            Violation: Comment.comment cannot be null"
+            <li>api에서 Comment.create에 postId 안 씀</li>
+            <li>api.rest에서 commnet 오타</li>
+            <li>commentId는 autoIncrement인데 notNull 오류 생기는 이유?</li>
+            <li>model에서 autoIncerment 오타, migration만 수정했었음</li>
+            parent: Error: Unknown column 'poseId' in 'field list'
+            <li>Commnet 모델에 foreignKey: "poseId", 오타</li>
+            Error: WHERE parameter "username" has invalid "undefined" value
+            <li>댓글 수정 api</li>
+            <li>api.rest에 Content-Type: application/json 안 씀</li>
+          </div>
+          <h1><a href="#top" name="0710">0710</a></h1>
           <div class="cnts"></div>
         </div>
       </div>
