@@ -34,7 +34,8 @@
         <a href="#title7">7. 머쓱이보다 키 큰 사람</a>
         <a href="#title8">8. 피자 나눠먹기 (3)</a>
         <a href="#title9">9. 아이스 아메리카노</a>
-        <a href="#title10">n번째 문제</a>
+        <a href="#title10">10. 문자열 뒤집기</a>
+        <a href="#title11">n번째 문제</a>
       </div>
       <div class="middle-content">
         <div class="level-link">
@@ -420,8 +421,51 @@
   }
             </pre
               >
+            </div>
           </div>
-          <h1><a href="#top" name="title10">n번째 문제</a></h1>
+          <h1><a href="#top" name="title10">문자열 뒤집기</a></h1>
+          <div class="cnts">
+            <div class="code-box">
+              <pre>
+  #1
+  function solution(my_string) {
+    return my_string.split('').reverse().join('');
+  } // 다들 비슷한 생각을 했다는 걸 알게 됨
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #2
+  function solution(my_string) {
+    return [...my_string].reverse().join('');
+  } // 스프레드로 문자열을 배열로 바꾸기
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #3
+  function solution(my_string) {
+    let answer = ''
+    for (let i = my_string.length; i >= 0; i--) // 문자열은 0부터 배열은 1부터 센다
+        answer += my_string.charAt(i) // 문자열을 변수에 하나씩 더할 수 있다.
+    return answer
+  }
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #4
+  function solution(my_string) {
+    return Array.from(my_string).reverse().join('')
+  }
+            </pre
+              >
+            </div>
+          </div>
+          <h1><a href="#top" name="title11">n번째 문제</a></h1>
           <div class="cnts">
             <div class="code-box"><pre></pre></div>
           </div>
