@@ -42,6 +42,7 @@
           <a href="#0708">0708</a>
           <a href="#0709">0709</a>
           <a href="#0710">0710</a>
+          <a href="#0711">0711</a>
         </div>
         <div class="content">
           <h1><a href="#top" name="0701">0701</a></h1>
@@ -567,6 +568,31 @@
             <li>api.rest에 Content-Type: application/json 안 씀</li>
           </div>
           <h1><a href="#top" name="0710">0710</a></h1>
+          <div class="cnts">
+            <h3>error</h3>
+            Cannot POST /signup
+            <li>회원가입 api 첫 post, url에 /api 안 씀</li>
+            notNull Violation: UserInfos.userId cannot be null
+            <li>데이터 베이스 접근할 때 await 안 씀</li>
+            Error: WHERE parameter "email" has invalid "undefined" value
+            <li>
+              로그인 api 시도, api.rest에 Content-Type: application/json 또 안
+              적음
+            </li>
+            ReferenceError: user is not defined
+            <li>
+              console.log(user)의 출력 결과가 undefined가 아니라 user is not
+              defined
+            </li>
+            if (!user || user.password !== password)
+            <li>
+              req.body 에서 password를 integer로 받아서 기존에 있던 string
+              password와 불일치
+            </li>
+            jwt is not defined
+            <li>require로 jsonwebtoken 안 가져옴</li>
+          </div>
+          <h1><a href="#top" name="0711">0711</a></h1>
           <div class="cnts"></div>
         </div>
       </div>
