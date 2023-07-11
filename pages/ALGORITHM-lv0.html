@@ -36,7 +36,8 @@
         <a href="#title9">9. 아이스 아메리카노</a>
         <a href="#title10">10. 문자열 뒤집기</a>
         <a href="#title11">11. 배열의 유사도</a>
-        <a href="#title12">n번째 문제</a>
+        <a href="#title12">12. 순서쌍의 갯수</a>
+        <a href="#title13">n번째 문제</a>
       </div>
       <div class="middle-content">
         <div class="level-link">
@@ -449,12 +450,13 @@
   #3
   function solution(my_string) {
     let answer = ''
-    for (let i = my_string.length; i >= 0; i--) // 문자열은 0부터 배열은 1부터 센다
+    for (let i = my_string.length; i >= 0; i--)
+    <span class="unknown">// 문자열은 0부터 배열은 1부터 센다</span>
+    <span class="add">// => 문자열, 배열 0부터 센다</span>
         answer += my_string.charAt(i) // 문자열을 변수에 하나씩 더할 수 있다.
     return answer
   }
-            </pre
-              >
+            </pre>
             </div>
             <div class="code-box">
               <pre>
@@ -519,7 +521,73 @@
               >
             </div>
           </div>
-          <h1><a href="#top" name="title12">n번째 문제</a></h1>
+          <h1><a href="#top" name="title12">순서쌍의 갯수</a></h1>
+          <div class="cnts">
+            <h3>두 수의 곱이 n 인 쌍 (a, b)의 갯수</h3>
+            <div class="code-box">
+              <pre>
+  #1
+  function solution(n) {
+    let count = 0;
+    for (let i = 1; i <= n; i++) {
+        if (n%i === 0) count++
+    }
+    return count;
+  } // 1부터 n까지 순환하며 n을 나눈 값이 정수일 때 카운트
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #2
+  function solution(n) {
+    let left = 1;
+    let right = n;
+    let count = 0;
+    while(right > 0){
+        if(left * right === n) {
+            count++;
+            left++;
+            right--;
+        }else if(left * right > n){
+            right--;
+        }else{
+            left++
+        }
+
+    }
+    return count;
+  } // 양쪽에서 시작해 교차하면서 탐색
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #3
+  function solution(n) {
+    let ans = 0;
+    for (let i = 1; i < Math.sqrt(n); i++)
+        if (n%i === 0) ans+=2;
+
+    return Number.isInteger(Math.sqrt(n)) ? ans+1 : ans;
+  } // n의 제곱근까지 순환, 제곱근이 정수면 쌍 하나 추가
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #4
+  function solution(n) {
+    return Array(n).fill(1).map((v,idx) => v + idx)
+      .filter(v => n % v === 0).length
+  }
+  // n길이의 배열의 모든 요소를 1로 채운 후 각 요소에 
+     인덱스 값 더해주고 순서쌍 필터링한 길이 반환
+            </pre
+              >
+            </div>
+          </div>
+          <h1><a href="#top" name="title13">n번째 문제</a></h1>
           <div class="cnts">
             <div class="code-box"><pre></pre></div>
           </div>
