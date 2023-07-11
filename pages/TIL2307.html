@@ -43,6 +43,7 @@
           <a href="#0709">0709</a>
           <a href="#0710">0710</a>
           <a href="#0711">0711</a>
+          <a href="#0712">0712</a>
         </div>
         <div class="content">
           <h1><a href="#top" name="0701">0701</a></h1>
@@ -594,6 +595,35 @@
             <li>require로 jsonwebtoken 안 가져옴</li>
           </div>
           <h1><a href="#top" name="0711">0711</a></h1>
+          <div class="cnts">
+            <h3>error</h3>
+            jwt expired
+            <li>jwt 만료됨</li>
+            <li>
+              payload에 exp: +10 추가하면 10초 후 로그아웃? 되는데 10초 안에도
+              만료된 이상한 상태
+            </li>
+            <li>옵션 자리에 { expiresIn: "10s" } 추가하면 잘 됨</li>
+            Users is associated to Posts using an alias. You must use the 'as'
+            keyword to specify the alias within your include statement.
+            <li>게시글 조회 여러 테이블 join</li>
+            <li>
+              게시글에서 include할 유저 테이블의 별명 user를 include에 같이 써야
+              함
+            </li>
+            Error: Cannot find module '../middlewares'
+            <li>유저 라우터 파일에 인증 미들웨어 불러왔더니 오류 발생</li>
+            <li>
+              const authMiddleware = require('../middlewares/auth-middleware');
+            </li>
+            <li>파일까지 불러와야 함</li>
+            errorMessage: Argument passed to findByPk is invalid: [object
+            Object]
+            <li></li>
+            <h3>weird</h3>
+            <li>npx nodemon app.sj 잘못 적어도 잘 실행된다</li>
+          </div>
+          <h1><a href="#top" name="0712">0712</a></h1>
           <div class="cnts"></div>
         </div>
       </div>
