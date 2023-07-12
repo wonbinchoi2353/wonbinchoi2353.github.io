@@ -37,7 +37,8 @@
         <a href="#title10">10. 문자열 뒤집기</a>
         <a href="#title11">11. 배열의 유사도</a>
         <a href="#title12">12. 순서쌍의 갯수</a>
-        <a href="#title13">n번째 문제</a>
+        <a href="#title13">13. 점의 위치 구하기</a>
+        <a href="#title14">n번째 문제</a>
       </div>
       <div class="middle-content">
         <div class="level-link">
@@ -587,7 +588,57 @@
               >
             </div>
           </div>
-          <h1><a href="#top" name="title13">n번째 문제</a></h1>
+          <h1><a href="#top" name="title13">점의 위치 구하기</a></h1>
+          <div class="cnts">
+            <div class="code-box">
+              <pre>
+  #1
+  function solution(dot) {
+    let x = dot[0] > 0 ? [1, 4] : [2, 3];
+    let y = dot[1] > 0 ? [1, 2] : [3, 4];
+    return parseInt(x.filter((x) => y.includes(x)));
+  }
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #2
+  function solution(dot) {
+    let [x, y] = dot;
+    return x * y > 0 ? (x > 0 ? 1 : 3) : (x < 0 ? 2 : 4)
+  }
+  // 구조 분해 할당
+  // 상상만 하고 만들지 않았던 중첩 삼항 연산자
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #3
+  function solution(dot) {
+    return dot[0] > 0 ? (dot[1] > 0 ? 1 : 4) : (dot[1] > 0 ? 2 : 3)
+  }
+  // 더 줄이기
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #4
+  function solution(dot) {
+    var answer;
+    if (dot[0] > 0 && dot[1] > 0) return 1;
+    if (dot[0] < 0 && dot[1] > 0) return 2;
+    if (dot[0] < 0 && dot[1] < 0) return 3;
+    if (dot[0] > 0 && dot[1] < 0) return 4;
+  }
+  // if문 하나씩 만들기
+            </pre
+              >
+            </div>
+          </div>
+          <h1><a href="#top" name="title14">n번째 문제</a></h1>
           <div class="cnts">
             <div class="code-box"><pre></pre></div>
           </div>
