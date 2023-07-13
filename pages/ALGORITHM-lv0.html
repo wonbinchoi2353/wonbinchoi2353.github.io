@@ -42,9 +42,12 @@
         <a href="#title15">15. 짝수 홀수 갯수</a>
         <a href="#title16">16. 특정 문자 제거하기</a>
         <a href="#title17">17. 배열 자르기</a>
-        <a href="#title18">n번째 문제</a>
-        <a href="#title19">n번째 문제</a>
+        <a href="#title18">18. 옷가게 할인 받기</a>
+        <a href="#title19">19. 모음 제거</a>
         <a href="#title20">n번째 문제</a>
+        <a href="#title21">n번째 문제</a>
+        <a href="#title22">n번째 문제</a>
+        <a href="#title23">n번째 문제</a>
       </div>
       <div class="middle-content">
         <div class="level-link">
@@ -884,15 +887,72 @@
               >
             </div>
           </div>
-          <h1><a href="#top" name="title18">n번째 문제</a></h1>
+          <h1><a href="#top" name="title18">옷가게 할인 받기</a></h1>
+          <div class="cnts">
+            <div class="code-box">
+              <pre>
+  #1
+  function solution(price) {
+    if (price >= 500000) price *= 0.8;
+    else if (price >= 300000) price *= 0.9;
+    else if (price >= 100000) price *= 0.95;
+    return ~~price;
+  }
+  // 이게 왜 13점?
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #2
+  function solution(price) {
+    price = price>=500000?price*0.8:price>=300000?price*0.9:price>=100000?price*0.95:price;
+    return price | 0;
+  }
+  // 처음 알게된 삼항지옥
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #3
+  const solution=(p)=>~~(p*[1, 0.95, 0.95, 0.9, 0.9, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8][~~(p/100000)])
+  // 가격에 따라 인덱스로 할인률 찾기
+  // 인덱스를 사용하는 방법은 생각조차 나지 않는다
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #4
+  function solution(price) {
+    return ~~(price*(price>=5e5?0.8:price>=3e5?0.9:price>=1e5?0.95:1));   
+  }
+  // e: 지수 표기, 가격 곱하기 할인율로 코드 줄이기
+            </pre
+              >
+            </div>
+          </div>
+          <h1><a href="#top" name="title19">모음 제거</a></h1>
           <div class="cnts">
             <div class="code-box"><pre></pre></div>
-          </div>
-          <h1><a href="#top" name="title19">n번째 문제</a></h1>
-          <div class="cnts">
+            <div class="code-box"><pre></pre></div>
+            <div class="code-box"><pre></pre></div>
             <div class="code-box"><pre></pre></div>
           </div>
           <h1><a href="#top" name="title20">n번째 문제</a></h1>
+          <div class="cnts">
+            <div class="code-box"><pre></pre></div>
+          </div>
+          <h1><a href="#top" name="title21">n번째 문제</a></h1>
+          <div class="cnts">
+            <div class="code-box"><pre></pre></div>
+          </div>
+          <h1><a href="#top" name="title22">n번째 문제</a></h1>
+          <div class="cnts">
+            <div class="code-box"><pre></pre></div>
+          </div>
+          <h1><a href="#top" name="title23">n번째 문제</a></h1>
           <div class="cnts">
             <div class="code-box"><pre></pre></div>
           </div>
