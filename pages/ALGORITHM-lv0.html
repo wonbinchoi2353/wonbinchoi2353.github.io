@@ -44,7 +44,7 @@
         <a href="#title17">17. 배열 자르기</a>
         <a href="#title18">18. 옷가게 할인 받기</a>
         <a href="#title19">19. 모음 제거</a>
-        <a href="#title20">n번째 문제</a>
+        <a href="#title20">20. 자릿수 더하기</a>
         <a href="#title21">n번째 문제</a>
         <a href="#title22">n번째 문제</a>
         <a href="#title23">n번째 문제</a>
@@ -973,9 +973,34 @@
           <div class="cnts">
             <div class="code-box"><pre></pre></div>
           </div>
-          <h1><a href="#top" name="title21">n번째 문제</a></h1>
+          <h1><a href="#top" name="title21">자릿수 더하기</a></h1>
           <div class="cnts">
-            <div class="code-box"><pre></pre></div>
+            <div class="code-box">
+              <pre>
+  #1
+  function solution(n) {
+    let answer = 0;
+    let divN = n;
+    for (let i = 0; i < n.toString().length; i++) {
+        answer += divN % 10
+        divN = ~~(divN / 10);
+    }
+    return answer;
+  }
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #2
+  function solution(n) {
+    return [...n.toString()].reduce((acc, cur) => acc + Number(cur), 0);
+  }
+  // reduce 쓰는 게 익숙하지 않음, 초깃값에 0을 안 썼을 때 n이 한 자리 수면 문자열로 나옴
+  // 초깃값 0을 안 쓰면 첫 번째 요소가 누적값으로 할당되고 두 번째 요소가 현재 요소로 할당됨
+            </pre
+              >
+            </div>
           </div>
           <h1><a href="#top" name="title22">n번째 문제</a></h1>
           <div class="cnts">
