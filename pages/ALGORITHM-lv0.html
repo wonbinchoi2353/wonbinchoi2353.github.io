@@ -41,7 +41,7 @@
         <a href="#title14">14. 삼각형의 완성조건 (1)</a>
         <a href="#title15">15. 짝수 홀수 갯수</a>
         <a href="#title16">16. 특정 문자 제거하기</a>
-        <a href="#title17">n번째 문제</a>
+        <a href="#title17">17. 배열 자르기</a>
         <a href="#title18">n번째 문제</a>
         <a href="#title19">n번째 문제</a>
         <a href="#title20">n번째 문제</a>
@@ -827,9 +827,62 @@
               >
             </div>
           </div>
-          <h1><a href="#top" name="title17">n번째 문제</a></h1>
+          <h1><a href="#top" name="title17">배열 자르기</a></h1>
           <div class="cnts">
-            <div class="code-box"><pre></pre></div>
+            <div class="code-box">
+              <pre>
+  #1
+  function solution(numbers, num1, num2) {
+    return numbers.slice(num1, num2 + 1);
+  }
+  // slice는 이상, 미만이라서 두 번째 수에 + 1
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #2
+  function solution(numbers, num1, num2) {
+    let answer = [];
+    numbers.forEach((num, idx) => {
+        if (idx >= num1 && idx <= num2) answer.push(num);
+    })
+    return answer;
+  }
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #3
+  function solution(numbers, num1, num2) {
+    return numbers.splice(num1, num2 - num1 + 1);
+  }
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #4
+  function solution(numbers, num1, num2) {
+    let answer = [];
+    for (let i = num1; i <= num2; i++) answer.push(numbers[i]);
+    return answer;
+  }
+  // for 문으로 i를 num1부터 시작
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #5
+  function solution(numbers, num1, num2) {
+    return numbers.filter((num, i) => i >= num1 && i <= num2);
+  }
+  // filter에도 index가 되는지 몰랐다
+            </pre
+              >
+            </div>
           </div>
           <h1><a href="#top" name="title18">n번째 문제</a></h1>
           <div class="cnts">
