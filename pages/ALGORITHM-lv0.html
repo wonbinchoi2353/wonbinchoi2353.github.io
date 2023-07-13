@@ -40,7 +40,7 @@
         <a href="#title13">13. 점의 위치 구하기</a>
         <a href="#title14">14. 삼각형의 완성조건 (1)</a>
         <a href="#title15">15. 짝수 홀수 갯수</a>
-        <a href="#title16">n번째 문제</a>
+        <a href="#title16">16. 특정 문자 제거하기</a>
         <a href="#title17">n번째 문제</a>
         <a href="#title18">n번째 문제</a>
         <a href="#title19">n번째 문제</a>
@@ -782,9 +782,50 @@
               >
             </div>
           </div>
-          <h1><a href="#top" name="title16">n번째 문제</a></h1>
+          <h1><a href="#top" name="title16">특정 문자 제거하기</a></h1>
           <div class="cnts">
-            <div class="code-box"><pre></pre></div>
+            <div class="code-box">
+              <pre>
+  #1
+  function solution(my_string, letter) {
+    return my_string.replaceAll(letter, '')
+  }
+  // mdn에서 가장 적절해 보이는 메서드를 찾아 썼더니 1점을 얻었다
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #2
+  function solution(my_string, letter) {
+    let newStr = ""
+    for (let i of my_string) if (i !== letter) newStr += i;
+    return newStr
+  }
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #3
+  function solution(my_string, letter) {
+    return my_string.split(letter).join('')
+  }
+  // split하면 배열이 되겠지 하고 시도하지 않았다
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #4
+  function solution(my_string, letter) {
+    let reg = new RegExp(letter, 'g');
+    return my_string.replace(reg, '')
+  }
+  // 정규 표현식 g: 전역
+            </pre
+              >
+            </div>
           </div>
           <h1><a href="#top" name="title17">n번째 문제</a></h1>
           <div class="cnts">
