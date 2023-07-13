@@ -935,9 +935,38 @@
           </div>
           <h1><a href="#top" name="title19">모음 제거</a></h1>
           <div class="cnts">
-            <div class="code-box"><pre></pre></div>
-            <div class="code-box"><pre></pre></div>
-            <div class="code-box"><pre></pre></div>
+            <div class="code-box">
+              <pre>
+  #1
+  function solution(my_string) {
+    let answer = '';
+    for (let i of my_string) if (!/[aeiou]/.test(i)) answer += i;
+    return answer;
+  }
+  // split과 join이 생각나서 써보려 했지만 실패
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #2
+  function solution(my_string) {
+    return my_string.replace(/[aeiou]/g, '');
+  }
+  // 정규 표현식은 이렇게 쓰는 거구나
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #3
+  function solution(my_string) {
+    return [...my_string].filter((x) => !['a', 'e', 'i', 'o', 'u'].includes(x)).join('');
+  }
+  // filter와 includes 사용법
+            </pre
+              >
+            </div>
             <div class="code-box"><pre></pre></div>
           </div>
           <h1><a href="#top" name="title20">n번째 문제</a></h1>
