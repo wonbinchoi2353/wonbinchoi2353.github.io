@@ -38,7 +38,8 @@
         <a href="#title11">11. 배열의 유사도</a>
         <a href="#title12">12. 순서쌍의 갯수</a>
         <a href="#title13">13. 점의 위치 구하기</a>
-        <a href="#title14">n번째 문제</a>
+        <a href="#title14">14. 삼각형의 완성조건 (1)</a>
+        <a href="#title15">n번째 문제</a>
       </div>
       <div class="middle-content">
         <div class="level-link">
@@ -638,7 +639,66 @@
               >
             </div>
           </div>
-          <h1><a href="#top" name="title14">n번째 문제</a></h1>
+          <h1><a href="#top" name="title14">삼각형의 완성조건 (1)</a></h1>
+          <div class="cnts">
+            <h3>
+              배열의 세 요소 중 가장 큰 요소가 나머지 두 요소의 합보다 작아야 함
+            </h3>
+            <div class="code-box">
+              <pre>
+  #1
+  function solution(sides) {
+    // 배열 내림차순 정렬
+    const descSides = sides.sort((a, b) => b - a)
+    // 삼항 연산자
+    return descSides[0] < descSides[1] + descSides[2] ? 1 : 2
+  }
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #2
+  function solution(sides) {
+    // 배열의 최댓값 할당, 전개구문
+    const maxSide = Math.max(...sides);
+    // 배열의 요소 모두 더한 후 최댓값 빼기
+    const twoSides = sides.reduce((a,b) => a + b) - maxSide;
+    return maxSide < twoSides ? 1 : 2
+  }
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #3
+  function solution(sides) {
+    // 내림차순 정렬 후 구조 분해 할당
+    const [sideMax, sideA, sideB] = sides.sort((a,b) => b - a);
+    return sideMax < sideA + sideB ? 1 : 2
+  }
+              </pre>
+            </div>
+            <div class="code-box">
+              <pre>
+  #4
+  const solution = ([a, b, c]) => a&lt;b+c && b&lt;a+c && c&lt;a+b ? 1 : 2
+  // 화살표 함수로 한 줄에 모두 표현하기
+              </pre>
+            </div>
+            <div class="code-box">
+              <pre>
+  #5
+  function solution (sides) {
+    // sort 함수의 결과값은 sides에 바로 할당된다
+    sides.sort((a,b) => b-a)
+    return sides[0] < sides[1] + sides[2] ? 1 : 2
+  }
+            </pre
+              >
+            </div>
+          </div>
+          <h1><a href="#top" name="title15">n번째 문제</a></h1>
           <div class="cnts">
             <div class="code-box"><pre></pre></div>
           </div>
