@@ -39,7 +39,12 @@
         <a href="#title12">12. 순서쌍의 갯수</a>
         <a href="#title13">13. 점의 위치 구하기</a>
         <a href="#title14">14. 삼각형의 완성조건 (1)</a>
-        <a href="#title15">n번째 문제</a>
+        <a href="#title15">15. 짝수 홀수 갯수</a>
+        <a href="#title16">n번째 문제</a>
+        <a href="#title17">n번째 문제</a>
+        <a href="#title18">n번째 문제</a>
+        <a href="#title19">n번째 문제</a>
+        <a href="#title20">n번째 문제</a>
       </div>
       <div class="middle-content">
         <div class="level-link">
@@ -698,7 +703,102 @@
               >
             </div>
           </div>
-          <h1><a href="#top" name="title15">n번째 문제</a></h1>
+          <h1><a href="#top" name="title15">짝수 홀수 갯수</a></h1>
+          <div class="cnts">
+            <div class="code-box">
+              <pre>
+  #1
+  function solution(num_list) {
+    let even = 0;
+    let odd = 0
+    num_list.map((x) => x%2 === 0 ? even++ : odd++)
+    return [even, odd]
+  }
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #2
+  function solution(num_list) {
+    let answer = [0, 0];
+    for (let i of num_list) answer[i%2] += 1;
+    return answer;
+  }
+  // 어떻게 인덱스를 쓸 생각을 했을까
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #3
+  function solution(num_list) {
+    return [
+        num_list.filter((x) => x%2 === 0).length,
+        num_list.filter((x) => x%2 === 1).length,
+    ]
+  }
+  // return에 다 쓰기, filter, length
+  // 난이도가 올라갈수록 사람들의 창의력도 올라가는 것 같다
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #4
+  function solution(num_list) {
+    return num_list.reduce((acc, cur) => (cur & 1 ? acc[1]++ : acc[0]++, acc), [0, 0])
+  }
+  // & 비트 AND 연산자: 1의 이진수는 0001, cur이 1과 0001 부분이 같으면 = 홀수이면
+  // reduce: acc는 누적값
+  // [0, 0]: initialValue, 초기값
+  // 점점 어려워진다
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #5
+  function solution(num_list) {
+    return num_list.reduce(([even, odd], cur) => (cur & 1 ? odd++ : even++, [even, odd]), [0, 0])
+  }
+  // 누적값에 배열 넣기
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #6
+  function solution(num_list) {
+    const answer = [0, 0];
+    for (let i = 0; i < num_list.length; i++) {
+        if (num_list[i] % 2 === 0) answer[0]++
+        else answer[1]++;
+    }
+    return answer;
+  }
+  // for문
+            </pre
+              >
+            </div>
+          </div>
+          <h1><a href="#top" name="title16">n번째 문제</a></h1>
+          <div class="cnts">
+            <div class="code-box"><pre></pre></div>
+          </div>
+          <h1><a href="#top" name="title17">n번째 문제</a></h1>
+          <div class="cnts">
+            <div class="code-box"><pre></pre></div>
+          </div>
+          <h1><a href="#top" name="title18">n번째 문제</a></h1>
+          <div class="cnts">
+            <div class="code-box"><pre></pre></div>
+          </div>
+          <h1><a href="#top" name="title19">n번째 문제</a></h1>
+          <div class="cnts">
+            <div class="code-box"><pre></pre></div>
+          </div>
+          <h1><a href="#top" name="title20">n번째 문제</a></h1>
           <div class="cnts">
             <div class="code-box"><pre></pre></div>
           </div>
