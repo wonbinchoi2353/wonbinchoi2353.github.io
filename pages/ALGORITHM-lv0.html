@@ -47,7 +47,7 @@
         <a href="#title20">20. 자릿수 더하기</a>
         <a href="#title21">21. 문자 반복 출력하기</a>
         <a href="#title22">22. 중앙값 구하기</a>
-        <a href="#title23">n번째 문제</a>
+        <a href="#title23">23. 배열 두 배 만들기</a>
         <a href="#title24">n번째 문제</a>
         <a href="#title25">n번째 문제</a>
       </div>
@@ -969,7 +969,6 @@
             </pre
               >
             </div>
-            <div class="code-box"><pre></pre></div>
           </div>
           <h1><a href="#top" name="title20">자릿수 더하기</a></h1>
           <div class="cnts">
@@ -1100,8 +1099,37 @@
               >
             </div>
           </div>
-          <h1><a href="#top" name="title23">n번째 문제</a></h1>
+          <h1><a href="#top" name="title23">배열 두 배 만들기</a></h1>
           <div class="cnts">
+            <div class="code-box">
+              <pre>
+  #1
+  function solution(numbers) {
+    return numbers.map((x) => x*2);
+  }
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #2
+  function solution(numbers) {
+    var answer = [];
+    numbers.forEach((x) => answer.push(x*2));
+    return answer;
+  }
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #3
+  function solution(numbers) {
+    return numbers.reduce((acc, cur) => [...acc, cur*2], []);
+  }
+            </pre
+              >
+            </div>
             <div class="code-box"><pre></pre></div>
           </div>
           <h1><a href="#top" name="title24">n번째 문제</a></h1>
