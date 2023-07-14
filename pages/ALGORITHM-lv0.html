@@ -46,7 +46,7 @@
         <a href="#title19">19. 모음 제거</a>
         <a href="#title20">20. 자릿수 더하기</a>
         <a href="#title21">21. 문자 반복 출력하기</a>
-        <a href="#title22">n번째 문제</a>
+        <a href="#title22">22. 중앙값 구하기</a>
         <a href="#title23">n번째 문제</a>
         <a href="#title24">n번째 문제</a>
         <a href="#title25">n번째 문제</a>
@@ -1060,9 +1060,45 @@
               >
             </div>
           </div>
-          <h1><a href="#top" name="title22">n번째 문제</a></h1>
+          <h1><a href="#top" name="title22">중앙값 구하기</a></h1>
           <div class="cnts">
-            <div class="code-box"><pre></pre></div>
+            <div class="code-box">
+              <pre>
+  #1
+  function solution(array) {
+    return array.sort((a, b) => a - b)[~~(array.length/2)];
+  }
+  // 배열 정렬 후 가운데 인덱스 구하기(배열 길이의 절반의 내림, 인덱스는 0부터 시작)
+  // 여태까지의 문제중 비슷한 답변이 가장 많았던 문제
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #2
+  function solution(array) {
+    // 오름차순
+    for (let i = array.length -1; i > 0; i--) {
+      for (let j = i - 1; j >= 0; j--) {
+        if (array[j] > array[i]) {
+        let temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+        }
+      }
+    }
+    // 내림
+    let floor = 0;
+    let middle = array.length/2;
+    while (middle > 1) {
+        middle--;
+        floor += 1;
+    }
+    return array[floor];
+  }
+            </pre
+              >
+            </div>
           </div>
           <h1><a href="#top" name="title23">n번째 문제</a></h1>
           <div class="cnts">
