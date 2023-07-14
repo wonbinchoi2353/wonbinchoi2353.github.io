@@ -48,8 +48,11 @@
         <a href="#title21">21. 문자 반복 출력하기</a>
         <a href="#title22">22. 중앙값 구하기</a>
         <a href="#title23">23. 배열 두 배 만들기</a>
-        <a href="#title24">n번째 문제</a>
+        <a href="#title24">24. 숨어있는 숫자의 덧셈</a>
         <a href="#title25">n번째 문제</a>
+        <a href="#title26">n번째 문제</a>
+        <a href="#title27">n번째 문제</a>
+        <a href="#title28">n번째 문제</a>
       </div>
       <div class="middle-content">
         <div class="level-link">
@@ -1132,11 +1135,67 @@
             </div>
             <div class="code-box"><pre></pre></div>
           </div>
-          <h1><a href="#top" name="title24">n번째 문제</a></h1>
+          <h1><a href="#top" name="title24">숨어있는 숫자의 덧셈</a></h1>
+          <div class="cnts">
+            <div class="code-box">
+              <pre>
+  #1
+  function solution(my_string) {
+    return [...my_string].filter((s) => !isNaN(Number(s))).reduce((acc, cur) => acc + Number(cur), 0);
+  }
+  // 너무 어려웠다
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #2
+  function solution(my_string) {
+    return [...my_string.replace(/\D/g, '')].reduce((acc, cur) => Number(cur) ? acc + +cur : acc, 0);
+  }
+  // 정규 표현식
+  // D: not a digit(아라비아 숫자가 아님), [^0-9]와 같음
+  // g: global, 전역 탐색
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #3
+  function solution(my_string) {
+    return my_string.match(/\d/g, '').reduce((acc, cur) => acc + parseInt(cur), 0);
+  }
+  // match: 일치하는 문자열 배열로 반환
+            </pre
+              >
+            </div>
+            <div class="code-box">
+              <pre>
+  #4
+  function solution(my_string) {
+    var answer = 0;
+    for (let s of my_string) if (!isNaN(s)) answer += +s;
+    return answer;
+  }
+  // !isNaN(): 숫자라면, 문자열 안에 있어도 숫자 판별 가능
+  // +'숫자' = 숫자, 문자열 숫자로 바꾸기
+            </pre
+              >
+            </div>
+          </div>
+          <h1><a href="#top" name="title25">n번째 문제</a></h1>
           <div class="cnts">
             <div class="code-box"><pre></pre></div>
           </div>
-          <h1><a href="#top" name="title25">n번째 문제</a></h1>
+          <h1><a href="#top" name="title26">n번째 문제</a></h1>
+          <div class="cnts">
+            <div class="code-box"><pre></pre></div>
+          </div>
+          <h1><a href="#top" name="title27">n번째 문제</a></h1>
+          <div class="cnts">
+            <div class="code-box"><pre></pre></div>
+          </div>
+          <h1><a href="#top" name="title28">n번째 문제</a></h1>
           <div class="cnts">
             <div class="code-box"><pre></pre></div>
           </div>
